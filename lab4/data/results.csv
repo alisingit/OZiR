@@ -1,0 +1,151 @@
+system,category,item,target_count,error_count,status,comment
+Silero TTS,graph_abbrev,1,3,0,ok,
+Silero TTS,graph_abbrev,2,2,0,ok,
+Silero TTS,graph_abbrev,3,3,1,partial,"инициал М. прочитан неестественно"
+Silero TTS,graph_abbrev,4,1,0,ok,
+Silero TTS,graph_abbrev,5,2,0,ok,
+Silero TTS,graph_abbrev,6,2,0,ok,
+Silero TTS,graph_abbrev,7,2,0,ok,
+Silero TTS,graph_abbrev,8,1,0,ok,
+Silero TTS,graph_abbrev,9,1,0,ok,
+Silero TTS,graph_abbrev,10,1,0,ok,
+Silero TTS,initial_abbrev,1,1,0,ok,
+Silero TTS,initial_abbrev,2,2,0,ok,
+Silero TTS,initial_abbrev,3,2,1,partial,"ЛВС прочитано нестабильно"
+Silero TTS,initial_abbrev,4,1,0,ok,
+Silero TTS,initial_abbrev,5,3,1,partial,"БМК озвучено по буквам с неверным ударением"
+Silero TTS,initial_abbrev,6,1,0,ok,
+Silero TTS,initial_abbrev,7,3,1,partial,"ЮКОСа прочитано с неправильным ударением"
+Silero TTS,initial_abbrev,8,2,0,ok,
+Silero TTS,initial_abbrev,9,2,1,partial,"РСФСР прочитано неразборчиво"
+Silero TTS,initial_abbrev,10,1,1,error,"BMW озвучено как английское слово"
+Silero TTS,numbers,1,3,0,ok,
+Silero TTS,numbers,2,4,1,partial,"одно длинное число сгруппировано неверно"
+Silero TTS,numbers,3,3,0,ok,
+Silero TTS,numbers,4,1,0,ok,
+Silero TTS,numbers,5,2,0,ok,
+Silero TTS,numbers,6,1,0,ok,
+Silero TTS,numbers,7,11,3,partial,"часть дробей прочитана без слова 'одна'"
+Silero TTS,numbers,8,1,0,ok,
+Silero TTS,numbers,9,2,0,ok,
+Silero TTS,numbers,10,2,0,ok,
+RHVoice,graph_abbrev,1,3,0,ok,
+RHVoice,graph_abbrev,2,2,0,ok,
+RHVoice,graph_abbrev,3,3,1,partial,"инициал М. произнесён как отдельный звук"
+RHVoice,graph_abbrev,4,1,0,ok,
+RHVoice,graph_abbrev,5,2,0,ok,
+RHVoice,graph_abbrev,6,2,0,ok,
+RHVoice,graph_abbrev,7,2,1,partial,"одно употребление и. о. прочитано посимвольно"
+RHVoice,graph_abbrev,8,1,0,ok,
+RHVoice,graph_abbrev,9,1,0,ok,
+RHVoice,graph_abbrev,10,1,0,ok,
+RHVoice,initial_abbrev,1,1,0,ok,
+RHVoice,initial_abbrev,2,2,0,ok,
+RHVoice,initial_abbrev,3,2,1,partial,"ЛВС звучит неразборчиво"
+RHVoice,initial_abbrev,4,1,0,ok,
+RHVoice,initial_abbrev,5,3,2,partial,"СБИС и БМК прочитаны с ошибками"
+RHVoice,initial_abbrev,6,1,0,ok,
+RHVoice,initial_abbrev,7,3,1,partial,"ошибка ударения в ЮКОСа"
+RHVoice,initial_abbrev,8,2,0,ok,
+RHVoice,initial_abbrev,9,2,1,partial,"РСФСР произнесено слишком слитно"
+RHVoice,initial_abbrev,10,1,1,error,"BMW прочитано не по-русски"
+RHVoice,numbers,1,3,0,ok,
+RHVoice,numbers,2,4,1,partial,"длинное число разбито не по разрядам"
+RHVoice,numbers,3,3,0,ok,
+RHVoice,numbers,4,1,0,ok,
+RHVoice,numbers,5,2,0,ok,
+RHVoice,numbers,6,1,0,ok,
+RHVoice,numbers,7,11,4,partial,"несколько дробей озвучены как номера"
+RHVoice,numbers,8,1,0,ok,
+RHVoice,numbers,9,2,0,ok,
+RHVoice,numbers,10,2,0,ok,
+Piper,graph_abbrev,1,3,0,ok,
+Piper,graph_abbrev,2,2,1,partial,"номер закона прочитан с паузой внутри"
+Piper,graph_abbrev,3,3,1,partial,"долл. прочитано буквально"
+Piper,graph_abbrev,4,1,0,ok,
+Piper,graph_abbrev,5,2,0,ok,
+Piper,graph_abbrev,6,2,0,ok,
+Piper,graph_abbrev,7,2,1,partial,"одно и. о. прочитано как буквы"
+Piper,graph_abbrev,8,1,0,ok,
+Piper,graph_abbrev,9,1,0,ok,
+Piper,graph_abbrev,10,1,0,ok,
+Piper,initial_abbrev,1,1,0,ok,
+Piper,initial_abbrev,2,2,0,ok,
+Piper,initial_abbrev,3,2,1,partial,"БД прочитано недостаточно отчётливо"
+Piper,initial_abbrev,4,1,0,ok,
+Piper,initial_abbrev,5,3,2,partial,"СБИС и БМК озвучены неправильно"
+Piper,initial_abbrev,6,1,0,ok,
+Piper,initial_abbrev,7,3,1,partial,"ЮКОСа получил неверное ударение"
+Piper,initial_abbrev,8,2,1,partial,"инициал Ф. прочитан как звук"
+Piper,initial_abbrev,9,2,1,partial,"РСФСР озвучено с пропуском буквы"
+Piper,initial_abbrev,10,1,1,error,"BMW прочитано как английское слово"
+Piper,numbers,1,3,0,ok,
+Piper,numbers,2,4,1,partial,"одно длинное число сгруппировано неверно"
+Piper,numbers,3,3,1,partial,"5 млн. 800 тысячам прочитано без согласования"
+Piper,numbers,4,1,0,ok,
+Piper,numbers,5,2,1,partial,"XIX прочитано как буквы"
+Piper,numbers,6,1,0,ok,
+Piper,numbers,7,11,4,partial,"часть дробей прочитана как символы"
+Piper,numbers,8,1,0,ok,
+Piper,numbers,9,2,0,ok,
+Piper,numbers,10,2,1,partial,"4,3-тонный произнесено с неверным согласованием"
+Coqui XTTS,graph_abbrev,1,3,0,ok,
+Coqui XTTS,graph_abbrev,2,2,1,partial,"ст. прочитано как 'эс тэ'"
+Coqui XTTS,graph_abbrev,3,3,2,partial,"инициал и долл. прочитаны не по норме"
+Coqui XTTS,graph_abbrev,4,1,0,ok,
+Coqui XTTS,graph_abbrev,5,2,1,partial,"т. п. прочитано посимвольно"
+Coqui XTTS,graph_abbrev,6,2,1,partial,"стр. не раскрыто"
+Coqui XTTS,graph_abbrev,7,2,1,partial,"одно и. о. прочитано как буквы"
+Coqui XTTS,graph_abbrev,8,1,0,ok,
+Coqui XTTS,graph_abbrev,9,1,0,ok,
+Coqui XTTS,graph_abbrev,10,1,1,error,"им. не раскрыто"
+Coqui XTTS,initial_abbrev,1,1,0,ok,
+Coqui XTTS,initial_abbrev,2,2,1,partial,"МГИМО произнесено с неправильным ударением"
+Coqui XTTS,initial_abbrev,3,2,2,error,"БД и ЛВС прочитаны некорректно"
+Coqui XTTS,initial_abbrev,4,1,1,error,"НПО прочитано как слово"
+Coqui XTTS,initial_abbrev,5,3,2,partial,"ошибки в СБИС и БМК"
+Coqui XTTS,initial_abbrev,6,1,0,ok,
+Coqui XTTS,initial_abbrev,7,3,2,partial,"ошибки в ЮКОСа и инициалах"
+Coqui XTTS,initial_abbrev,8,2,1,partial,"инициал Ф. прочитан неверно"
+Coqui XTTS,initial_abbrev,9,2,2,error,"ЖК РСФСР прочитано неразборчиво"
+Coqui XTTS,initial_abbrev,10,1,1,error,"BMW озвучено как английское слово"
+Coqui XTTS,numbers,1,3,1,partial,"телефон прочитан как одно число"
+Coqui XTTS,numbers,2,4,2,partial,"ошибки в длинных числах"
+Coqui XTTS,numbers,3,3,1,partial,"миллионы согласованы неверно"
+Coqui XTTS,numbers,4,1,0,ok,
+Coqui XTTS,numbers,5,2,1,partial,"XIX прочитано как буквы"
+Coqui XTTS,numbers,6,1,1,error,"XVIII прочитано посимвольно"
+Coqui XTTS,numbers,7,11,5,partial,"часть дробей и смешанное число прочитаны неверно"
+Coqui XTTS,numbers,8,1,0,ok,
+Coqui XTTS,numbers,9,2,1,partial,"II прочитано как 'ай ай'"
+Coqui XTTS,numbers,10,2,1,partial,"км/ч прочитано не полностью"
+eSpeak NG,graph_abbrev,1,3,1,partial,"д. прочитано как буква"
+eSpeak NG,graph_abbrev,2,2,2,error,"ст. и № не раскрыты"
+eSpeak NG,graph_abbrev,3,3,2,partial,"млн. и долл. прочитаны посимвольно"
+eSpeak NG,graph_abbrev,4,1,1,error,"т. е. не раскрыто"
+eSpeak NG,graph_abbrev,5,2,2,error,"т. д. и т. п. прочитаны как буквы"
+eSpeak NG,graph_abbrev,6,2,2,error,"см. и стр. не раскрыты"
+eSpeak NG,graph_abbrev,7,2,2,error,"и. о. прочитано посимвольно"
+eSpeak NG,graph_abbrev,8,1,1,error,"гг. не раскрыто"
+eSpeak NG,graph_abbrev,9,1,0,ok,
+eSpeak NG,graph_abbrev,10,1,1,error,"им. не раскрыто"
+eSpeak NG,initial_abbrev,1,1,0,ok,
+eSpeak NG,initial_abbrev,2,2,1,partial,"МГИМО прочитано побуквенно"
+eSpeak NG,initial_abbrev,3,2,2,error,"БД и ЛВС не распознаны"
+eSpeak NG,initial_abbrev,4,1,1,error,"НПО прочитано неестественно"
+eSpeak NG,initial_abbrev,5,3,3,error,"СБИС, БМК и НПО прочитаны с ошибками"
+eSpeak NG,initial_abbrev,6,1,1,error,"КПРФ прочитано неразборчиво"
+eSpeak NG,initial_abbrev,7,3,3,error,"ЮКОСа и инициалы прочитаны с ошибками"
+eSpeak NG,initial_abbrev,8,2,2,error,"МВД и Ф. прочитаны неверно"
+eSpeak NG,initial_abbrev,9,2,2,error,"ЖК РСФСР не распознано"
+eSpeak NG,initial_abbrev,10,1,1,error,"BMW прочитано не по-русски"
+eSpeak NG,numbers,1,3,2,partial,"дата и телефон прочитаны неестественно"
+eSpeak NG,numbers,2,4,3,partial,"ошибки в длинных числах"
+eSpeak NG,numbers,3,3,2,partial,"миллионы и год прочитаны с ошибками"
+eSpeak NG,numbers,4,1,1,error,"30-летие прочитано с неверным ударением"
+eSpeak NG,numbers,5,2,2,error,"римская цифра и число прочитаны неверно"
+eSpeak NG,numbers,6,1,1,error,"XVIII прочитано как буквы"
+eSpeak NG,numbers,7,11,7,partial,"большинство дробей прочитано как символы"
+eSpeak NG,numbers,8,1,1,error,"12-й прочитано как цифры и буква"
+eSpeak NG,numbers,9,2,1,partial,"II прочитано как буквы"
+eSpeak NG,numbers,10,2,2,error,"4,3-тонный и км/ч прочитаны неверно"
