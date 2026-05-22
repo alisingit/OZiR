@@ -1,0 +1,13 @@
+numpy<2
+scipy
+matplotlib
+pandas
+torch
+torchaudio
+soundfile
+librosa
+tqdm
+tensorboard
+jiwer
+TTS
+jupyter

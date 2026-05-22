@@ -1,0 +1,42 @@
+{
+  "experiment_name": "vits_baseline",
+  "model": "vits",
+  "dataset": {
+    "formatter": "ljspeech",
+    "path": "data/processed/denis_ljspeech",
+    "meta_file_train": "metadata_train.csv",
+    "meta_file_val": "metadata_val.csv",
+    "language": "ru"
+  },
+  "audio": {
+    "sample_rate": 22050,
+    "num_mels": 80,
+    "fft_size": 1024,
+    "hop_length": 256,
+    "win_length": 1024,
+    "mel_fmin": 0,
+    "mel_fmax": 8000
+  },
+  "training": {
+    "output_path": "checkpoints/vits_baseline",
+    "log_path": "runs/vits_baseline",
+    "batch_size": 16,
+    "eval_batch_size": 8,
+    "epochs": 80,
+    "save_step": 1000,
+    "print_step": 25,
+    "mixed_precision": false,
+    "num_loader_workers": 2,
+    "num_eval_loader_workers": 1,
+    "seed": 42
+  },
+  "hyperparameters": {
+    "lr_gen": 0.0002,
+    "lr_disc": 0.0002,
+    "mel_loss_alpha": 45.0,
+    "kl_loss_alpha": 1.0,
+    "dur_loss_alpha": 1.0,
+    "use_phonemes": false,
+    "text_cleaner": "multilingual_cleaners"
+  }
+}

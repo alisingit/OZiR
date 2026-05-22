@@ -1,0 +1,41 @@
+{
+  "experiment_name": "tacotron2_baseline",
+  "model": "tacotron2",
+  "dataset": {
+    "formatter": "ljspeech",
+    "path": "data/processed/denis_ljspeech",
+    "meta_file_train": "metadata_train.csv",
+    "meta_file_val": "metadata_val.csv",
+    "language": "ru"
+  },
+  "audio": {
+    "sample_rate": 22050,
+    "num_mels": 80,
+    "fft_size": 1024,
+    "hop_length": 256,
+    "win_length": 1024,
+    "mel_fmin": 0,
+    "mel_fmax": 8000
+  },
+  "training": {
+    "output_path": "checkpoints/tacotron2_baseline",
+    "log_path": "runs/tacotron2_baseline",
+    "batch_size": 32,
+    "eval_batch_size": 16,
+    "epochs": 120,
+    "save_step": 1000,
+    "print_step": 25,
+    "mixed_precision": false,
+    "num_loader_workers": 2,
+    "num_eval_loader_workers": 1,
+    "seed": 42
+  },
+  "hyperparameters": {
+    "lr": 0.0001,
+    "r": 2,
+    "grad_clip": 1.0,
+    "use_phonemes": false,
+    "text_cleaner": "multilingual_cleaners",
+    "vocoder_name": "vocoder_models/universal/libri-tts/hifigan_v2"
+  }
+}
