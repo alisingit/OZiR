@@ -2,22 +2,23 @@
 # The script downloads, extracts and preprocessing the VoxCeleb1 (train and test), SLR17 and SLR28 datasets 
 # Requirement: wget running on a Linux system 
 
-import os
-import time
-import subprocess
-import hashlib
-import tarfile
-from zipfile import ZipFile
 import glob
-import numpy as np
-from tqdm import tqdm
-from scipy.io import wavfile
-from pathlib import Path
+import hashlib
+import os
+import random
+import subprocess
+import tarfile
+import time
+from functools import partial
 from multiprocessing import Pool
+from pathlib import Path
+from zipfile import ZipFile
+
+import numpy as np
 import soundfile
 from scipy import signal
-import random
-from functools import partial
+from scipy.io import wavfile
+from tqdm import tqdm
 
 
 def check_dir(pth_):
