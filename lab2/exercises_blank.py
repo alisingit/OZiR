@@ -44,10 +44,13 @@ def framing(emphasized_signal, sample_rate=16000, frame_size=0.025, frame_stride
     signal_length = len(emphasized_signal)
     frame_length = int(round(frame_length))
     frame_step = int(round(frame_step))
-    num_frames = int(
-        np.ceil(float(np.abs(signal_length - frame_length)) / frame_step))
+    if signal_length <= frame_length:
+        num_frames = 1
+    else:
+        num_frames = 1 + int(
+            np.ceil(float(signal_length - frame_length) / frame_step))
 
-    pad_signal_length = num_frames * frame_step + frame_length
+    pad_signal_length = (num_frames - 1) * frame_step + frame_length
     z = np.zeros((pad_signal_length - signal_length))
     pad_signal = np.append(emphasized_signal, z)
 
