@@ -1,0 +1,68 @@
+{
+  "experiment_name": "xtts_finetune",
+  "language": "ru",
+  "dataset": {
+    "formatter": "coqui",
+    "name": "ru_single_speaker_xtts",
+    "path": "data/processed/ru_ss_xtts",
+    "meta_file_train": "metadata_train.csv",
+    "meta_file_val": "metadata_eval.csv"
+  },
+  "pretrained_model": {
+    "model_dir": "checkpoints/xtts_original"
+  },
+  "training": {
+    "output_path": "checkpoints/xtts_finetune",
+    "log_path": "runs/xtts_finetune",
+    "epochs": 6,
+    "batch_size": 1,
+    "eval_batch_size": 1,
+    "grad_accum_steps": 4,
+    "num_loader_workers": 4,
+    "num_eval_loader_workers": 2,
+    "print_step": 25,
+    "plot_step": 100,
+    "save_step": 500,
+    "save_n_checkpoints": 10,
+    "seed": 42,
+    "mixed_precision": false,
+    "max_audio_length_sec": 11.6
+  },
+  "hyperparameters": {
+    "lr": 0.000005,
+    "optimizer": "AdamW",
+    "optimizer_params": {
+      "betas": [
+        0.9,
+        0.96
+      ],
+      "eps": 0.00000001,
+      "weight_decay": 0.01
+    },
+    "lr_scheduler": "MultiStepLR",
+    "lr_scheduler_params": {
+      "milestones": [
+        900000,
+        2700000,
+        5400000
+      ],
+      "gamma": 0.5,
+      "last_epoch": -1
+    }
+  },
+  "inference": {
+    "speaker_reference": "data/processed/ru_ss_xtts/speaker_ref.txt",
+    "test_sentences": [
+      {
+        "text": "Сегодня мы проверяем синтез речи: модель должна читать спокойно, ясно и без лишних пауз.",
+        "speaker_wav": null,
+        "language": "ru"
+      },
+      {
+        "text": "Разве это не удивительно? Один короткий пример показывает вопросительную интонацию!",
+        "speaker_wav": null,
+        "language": "ru"
+      }
+    ]
+  }
+}
