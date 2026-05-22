@@ -45,10 +45,22 @@ def read_metadata(path: Path) -> list[tuple[str, str]]:
     return rows
 
 
+DB_TO_LN_SCALE = 10.0 / math.log(10.0)
+MCD_COEFFICIENT = math.sqrt(2.0) * DB_TO_LN_SCALE
+
+
 def mfcc(path: Path, sample_rate: int) -> np.ndarray:
     wav, _ = librosa.load(path, sr=sample_rate, mono=True)
-    features = librosa.feature.mfcc(y=wav, sr=sample_rate, n_mfcc=13)
-    return features.T
+    wav, _ = librosa.effects.trim(wav, top_db=30)
+    features = librosa.feature.mfcc(
+        y=wav,
+        sr=sample_rate,
+        n_mfcc=13,
+        n_fft=1024,
+        hop_length=256,
+        win_length=1024,
+    )
+    return features.T / DB_TO_LN_SCALE
 
 
 def dtw_mcd(reference_path: Path, synthesized_path: Path, sample_rate: int) -> float:
@@ -57,10 +69,9 @@ def dtw_mcd(reference_path: Path, synthesized_path: Path, sample_rate: int) -> f
     if len(reference) == 0 or len(synthesized) == 0:
         return math.nan
     distances = cdist(reference[:, 1:], synthesized[:, 1:], metric="euclidean")
-    accumulated = librosa.sequence.dtw(C=distances, backtrack=False)
-    normalizer = accumulated.shape[0] + accumulated.shape[1]
-    coefficient = 10.0 / math.log(10.0) * math.sqrt(2.0)
-    return float(coefficient * accumulated[-1, -1] / normalizer)
+    accumulated, path = librosa.sequence.dtw(C=distances, backtrack=True)
+    path_len = max(len(path), 1)
+    return float(MCD_COEFFICIENT * accumulated[-1, -1] / path_len)
 
 
 def run_asr(command_template: str, audio_path: Path) -> str:

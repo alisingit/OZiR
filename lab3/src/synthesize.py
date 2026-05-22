@@ -22,6 +22,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--output-dir", required=True, help="Directory for synthesized wav files.")
     parser.add_argument("--spectrogram-dir", default=None, help="Directory for mel-spectrogram png files.")
     parser.add_argument("--speaker", default=None, help="Optional speaker id/name for multi-speaker models.")
+    parser.add_argument(
+        "--force-cpu",
+        action="store_true",
+        help="Force inference on CPU even if CUDA is available.",
+    )
     return parser.parse_args()
 
 
@@ -47,6 +52,8 @@ def save_mel_spectrogram(wav_path: Path, output_path: Path, sample_rate: int) ->
 
 
 def synthesize(args: argparse.Namespace) -> None:
+    import torch
+
     from TTS.api import TTS
 
     checkpoint = resolve_path(args.checkpoint)
@@ -57,7 +64,13 @@ def synthesize(args: argparse.Namespace) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     spectrogram_dir.mkdir(parents=True, exist_ok=True)
 
-    tts = TTS(model_path=str(checkpoint), config_path=str(config), progress_bar=True, gpu=False)
+    use_gpu = (not args.force_cpu) and torch.cuda.is_available()
+    if use_gpu:
+        print(f"Using CUDA device: {torch.cuda.get_device_name(0)}")
+    else:
+        print("Using CPU for inference.")
+
+    tts = TTS(model_path=str(checkpoint), config_path=str(config), progress_bar=True, gpu=use_gpu)
     metrics: list[dict[str, float | str]] = []
 
     for item in load_texts(texts_path):

@@ -125,7 +125,8 @@ def write_metadata(rows: list[tuple[str, str]], path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8", newline="") as file:
         writer = csv.writer(file, delimiter="|", lineterminator="\n")
-        writer.writerows(rows)
+        for item_id, text in rows:
+            writer.writerow([item_id, text, text])
 
 
 def prepare_dataset(args: argparse.Namespace) -> None:
