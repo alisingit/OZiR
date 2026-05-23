@@ -1,5 +1,4 @@
 .venv/
-
 .DS_Store
 .python-version
 __pycache__/
@@ -11,4 +10,41 @@ __pycache__/
 *.pywz
 *.pyzw
 
-data/
+# lab4 local environments and caches
+lab4/.venv/
+lab4/.venv-coqui/
+lab4/.cache/
+lab4/**/.cache/
+
+# lab4 downloaded/generated artifacts
+lab4/models/
+lab4/audio/**/*.wav
+lab4/outputs/
+
+# lab4 Python bytecode
+lab4/**/__pycache__/
+lab4/**/*.py[cod]
+
+# lab3 local environments and caches
+lab3/.venv/
+lab3/.venv-coqui/
+lab3/.cache/
+lab3/**/.cache/
+
+# lab3 downloaded/generated artifacts
+lab3/models/
+lab3/audio/**/*.wav
+lab3/outputs/
+
+# lab3 Python bytecode
+lab3/**/__pycache__/
+lab3/**/*.py[cod]
+
+/data/
+/lab1/
+/lab2_data/
+/sr_labs_book/
+
+*.pdf
+Лабораторная работа 2.md
+Лабораторные работы.md
